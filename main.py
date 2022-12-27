@@ -496,7 +496,6 @@ def main(args):
     
     model = KGReasoning(args, device, adj_list, query_name_dict, name_answer_dict)
 
-    # evaluate(model, valid_hard_answers, valid_easy_answers, args, valid_dataloader, query_name_dict, device)
     cp_thrshd = None
     if args.do_cp:
         cp_thrshd = get_cp_thrshd(model, valid_hard_answers, valid_easy_answers, args, valid_dataloader, query_name_dict, device)
