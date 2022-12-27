@@ -1,4 +1,7 @@
 ## Answering Complex Logical Queries on Knowledge Graphs via Query Computation Tree Optimization
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/answering-complex-logical-queries-on/complex-query-answering-on-fb15k)](https://paperswithcode.com/sota/complex-query-answering-on-fb15k?p=answering-complex-logical-queries-on)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/answering-complex-logical-queries-on/complex-query-answering-on-fb15k-237)](https://paperswithcode.com/sota/complex-query-answering-on-fb15k-237?p=answering-complex-logical-queries-on)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/answering-complex-logical-queries-on/complex-query-answering-on-nell-995)](https://paperswithcode.com/sota/complex-query-answering-on-nell-995?p=answering-complex-logical-queries-on)
 
 This is the official codebase of the State-of-the-Art **QTO** framework for complex query answering, proposed in [Answering Complex Logical Queries on Knowledge Graphs via Query Computation Tree Optimization](https://arxiv.org/abs/2212.09567).
 
