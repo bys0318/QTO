@@ -39,19 +39,19 @@ CUDA_VISIBLE_DEVICES=0 python main.py --dataset NELL995 --score_rel True --model
 
 ## Query Answering with QTO
 We provide commands to reproduce the results in our paper. Note that `--kbc_path` should be followed by the actual path to your pretained KGE model in the last step. `--fraction` is used to scatter the neural adjacency matrix to $n$ parts so that each part can be stored as a dense matrix on the GPU during calculation. Increase the fraction size in case of GPU out-of-memory.
-The command will first calculate the neural adjacency matrix and save it under folder `neural_adj/`.
+The command will first calculate the neural adjacency matrix using pretrained KGE model (saved under `kbc/{dataset}/`), and save it under folder `neural_adj/`.
 
 **FB15K**
 ```
-CUDA_VISIBLE_DEVICES=0 python main.py --data_path data/FB15k-betae --kbc_path kbc/FB15k.model --fraction 10 --thrshd 0.001 --neg_scale 6
+CUDA_VISIBLE_DEVICES=0 python main.py --data_path data/FB15k-betae --kbc_path kbc/FB15K/best_valid.model --fraction 10 --thrshd 0.001 --neg_scale 6 
 ```
 **FB15k-237**
 ```
-CUDA_VISIBLE_DEVICES=0 python main.py --data_path data/FB15k-237-betae --kbc_path kbc/FB237.model --fraction 10 --thrshd 0.0002 --neg_scale 3
+CUDA_VISIBLE_DEVICES=0 python main.py --data_path data/FB15k-237-betae --kbc_path kbc/FB15K-237/best_valid.model --fraction 10 --thrshd 0.0002 --neg_scale 3
 ```
 **NELL995**
 ```
-CUDA_VISIBLE_DEVICES=0 python main.py --data_path data/NELL-betae --kbc_path kbc/NELL995.model --fraction 10 --thrshd 0.0002 --neg_scale 6
+CUDA_VISIBLE_DEVICES=0 python main.py --data_path data/NELL-betae --kbc_path kbc/NELL995/best_valid.model --fraction 10 --thrshd 0.0002 --neg_scale 6
 ```
 The evaluation results will be saved under the `results/` folder. Add `--do_cp` command to further do cardinality prediction. Add `--path` command for interpretability evaluation, and the intermediate variable interpretations will also be printed on the screen for observation. '*y*' indicates the edge is trivially in the training graph, '*p*' indicates the edge is only in the valid/test graph and is correctly predicted, '*n*' indicates the edge is not in the graph and is incorrectly predicted.
 

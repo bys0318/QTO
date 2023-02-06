@@ -125,7 +125,7 @@ parser.add_argument(
     help='whether or not to cache per evaluation result'
 )
 parser.add_argument(
-    '--model_cache_path', default="/data/bys/Neural-KoPL/rp/models/{dataset}/{alias}/", # './tmp/model/{dataset}/{alias}/'
+    '--model_cache_path', default="../{dataset}/", # './tmp/model/{dataset}/{alias}/'
 )
 
 
