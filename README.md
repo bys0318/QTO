@@ -60,10 +60,12 @@ The evaluation results will be saved under the `results/` folder. Add `--do_cp` 
 Please cite our paper if you use our method in your work (Bibtex below).
 
 ```bibtex
-@article{bai2022qto,
-  title={Answering Complex Logical Queries on Knowledge Graphs via Query Computation Tree Optimization},
-  author={Bai, Yushi and Lv, Xin and Li, Juanzi and Hou, Lei},
-  journal={arXiv preprint arXiv:2212.09567},
-  year={2022}
+@InProceedings{pmlr-v202-bai23b,
+  title = 	 {Answering Complex Logical Queries on Knowledge Graphs via Query Computation Tree Optimization},
+  author =       {Bai, Yushi and Lv, Xin and Li, Juanzi and Hou, Lei},
+  booktitle = 	 {Proceedings of the 40th International Conference on Machine Learning},
+  pages = 	 {1472--1491},
+  year = 	 {2023},
+  volume = 	 {202},
 }
 ```
