@@ -13,8 +13,11 @@ We present **QTO**, an optimization-based method for answering complex logical q
 This is the PyTorch implementation of our proposed model based on the [KGReasoning](https://github.com/snap-stanford/KGReasoning) code framework.
 
 ## Data Preparation
-Download KG data (FB15k, FB15k-237, NELL995) from [here](http://snap.stanford.edu/betae/KG_data.zip), and place them under folder `data/`.
-Go to `kbc/` folder to prepare KG data for KGE model training:
+Download KG data (FB15k, FB15k-237, NELL995) from [here](http://snap.stanford.edu/betae/KG_data.zip):
+```
+wget http://snap.stanford.edu/betae/KG_data.zip
+```
+and place them under folder `data/`. Go to `kbc/` folder to prepare KG data for KGE model training:
 ```
 mkdir data/
 python preprocess_datasets.py
